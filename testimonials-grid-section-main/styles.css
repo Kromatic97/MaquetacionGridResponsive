@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2? family=Barlow+Semi+Condensado:wght@500;600&display=swap');
+
+:root{
+--Moderate_violet: hsl(263, 55%, 52%);
+--Very_dark_grayish_blue: hsl(217, 19%, 35%);
+--Very_dark_blackish_blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+--Light_gray: hsl(0, 0%, 81%);
+--Light_grayish_blue: hsl(210, 46%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+body{
+    background-color: var(--Light_grayish_blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 1000px;
+       padding:1em;
+
+}
+
+.testimonial{
+    background-color: red;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.testimonial:nth-child(1){
+    background-color: var(--Moderate_violet);
+    /* Se posicion en ralacion a la caja correspondiente */
+    position:relative 
+    
+}
+
+.quote{
+    /* Se posicion en ralacion absoluta al body inicialmente */
+    position: absolute;
+    top:0;
+    right:5em;
+    
+}
+
+.testimonial:nth-child(2){
+    background-color: var(--Very_dark_grayish_blue);
+}
+
+.testimonial:nth-child(3){
+    background-color: var(--White);
+}
+
+.testimonial:nth-child(4){
+    background-color: var(--Very_dark_blackish_blue);
+}
+
+.testimonial:nth-child(5){
+    background-color: var(--White);
+}
+
+.testimonial_header{
+    display: flex;
+    gap:1em;
+    align-items: center;
+}
+
+.testimonial_header img{
+    border-radius: 100%;
+    border: none
+}
+
+.testimonial_header_info p:nth-child(1){
+       font-weight: 600px;
+       
+}
+.testimonial_header_info p:nth-child(2){
+       font-weight: 500px;
+       color:var(--Light_gray);
+}
+
+.testimonial_title{
+    font-weight: 600px;
+    font-size: 1.5em;
+    margin:1em 0;
+    position: relative;
+    z-index: 100;
+
+   
+}
+
+.testimonial_paragraph{
+    font-weight: 500px;
+    font-size: 1.05em;
+    color:var(--Very_dark_grayish_blue);
+}
+
+/* desde 800px para arriba va a aplicar este formato */
+@media(min-width:800px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap:1em;
+    }
+
+    .testimonial{
+        margin:0;
+    }
+
+    .testimonial:nth-child(1){
+       grid-column: 1 / 3;
+     
+    }
+    
+    .testimonial:nth-child(2){
+        
+    }
+    
+    .testimonial:nth-child(3){
+        
+    }
+    
+    .testimonial:nth-child(4){
+        grid-column: 2 / 4;
+    }
+    
+    .testimonial:nth-child(5){
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+       
+    }
+
+}
+
+
+
+
+
+
+
+
+
